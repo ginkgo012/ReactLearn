@@ -8,7 +8,7 @@ import VideoDetail from './components/video_detail';
 import './style.css';
 import NavBar from './components/nav_bar';
 import SideBar from './components/side_bar';
-import ControlSidebar from './components/control_sidebar';
+
 
 const API_KEY = 'AIzaSyBiJblHvnEP8L2LnRZ_y38fqYRajUkr6kI';
  
@@ -46,12 +46,13 @@ class App extends Component{
         return (
             <div className ="wrapper">           
                 <SideBar onSidebarOpen={this.state.onSidebarOpen}/>
-                <ControlSidebar 
-                setSideBarStatus={this.setSideBarStatus}
-                onSidebarOpen={this.state.onSidebarOpen}
-                />
-                <div id="content">
                 
+                
+                <div id="content">
+                <NavBar
+                setSideBarStatus={this.setSideBarStatus}
+                onSidebarOpen={this.state.onSidebarOpen} />
+
                 <SearchBar onSearchTermChange={(term) => this.videoSearch(term)} />
                     <div className="row">
                         <VideoDetail video={this.state.selectedVideo} />
@@ -69,8 +70,4 @@ class App extends Component{
     }
 }
 
-
-
-//take this component's generated html and put it 
-//on the page
 ReactDOM.render(<App />, document.getElementById('root'));
