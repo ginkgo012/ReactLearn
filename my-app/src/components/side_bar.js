@@ -15,15 +15,15 @@ render(){
         <nav id="sidebar" className={this.props.onSidebarOpen ? "" : "active"} >
             {/* <!-- Sidebar Header --> */}
             <div className="sidebar-header">
-                <h3>Collapsible Sidebar</h3>
+                <h3>   Studio </h3>
             </div>      
             {/* <!-- Sidebar Links --> */}
             <ul className="list-unstyled components">
-                <li className="active"><a href="#">Home</a></li>
+                <li ><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li>
                     {/* <!-- Link with dropdown items --> */}
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle collapsed">Pages</a>
                     <ul className="collapse list-unstyled" id="homeSubmenu">
                         <li><a href="#">Page</a></li>
                         <li><a href="#">Page</a></li>
