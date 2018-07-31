@@ -6,6 +6,8 @@ import YTSearch from 'youtube-api-search';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 import './style.css';
+import NavBar from './components/nav_bar';
+import SideBar from './components/side_bar';
 
 const API_KEY = 'AIzaSyBiJblHvnEP8L2LnRZ_y38fqYRajUkr6kI';
  
@@ -40,9 +42,16 @@ class App extends Component{
     render(){
 
         //const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 1000 );
-
+        let childComponent = null;
+        childComponent = <div> JUJU burger </div>;
         return (
-            <div className="col-md-10">
+
+            <div>
+                
+                {/* <NavBar /> */}
+                <SideBar onSidebarOpen={this.props.setSideBar} />
+            <div className="col">
+                
                 <SearchBar onSearchTermChange={(term) => this.videoSearch(term)} />
                 <div className="row">
                     <VideoDetail video={this.state.selectedVideo} />
@@ -50,9 +59,14 @@ class App extends Component{
                         videos={this.state.videos}
                         onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     />
+                    {childComponent}
                 </div>
             </div>
-            );
+            </div>
+            
+        
+        
+        );
     }
 }
 
