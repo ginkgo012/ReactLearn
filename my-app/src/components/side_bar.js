@@ -1,21 +1,22 @@
 import React, {Component} from 'react';
+import SideBarButton from './side_bar_button';
 
 class SideBar extends Component{
     constructor(props){
         super(props);
         this.state = {
-            onSidebarOpen: true
+            onSidebarOpen : true
         };       
-    }
-
-    setSideBarStatus(){
-        const currentState = this.state.onSidebarOpen;
-        this.setState({onSidebarOpen: !currentState});
+        this.setSideBarStatus = ()=>{
+            const currentState = this.state.onSidebarOpen;
+            this.setState({onSidebarOpen: !currentState});
+        }
     }
     
 render(){
     return(
-    <div className="wrapper">
+    
+
         <nav id="sidebar" className={this.state.onSidebarOpen ? "" : "active"} >
             {/* <!-- Sidebar Header --> */}
             <div className="sidebar-header">
@@ -37,16 +38,15 @@ render(){
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <SideBarButton 
+            setSideBarStatus={this.setSideBarStatus}
+            onSidebarOpen={this.state.onSidebarOpen}/>
         </nav>
-        <div id="content">
-            <button onClick={this.setSideBarStatus.bind(this)} id="sidebarCollapse" className={this.state.onSidebarOpen ? "navbar-btn" : "navbar-btn active"}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            sdfd
-        </div>
-    </div>)
+        
+
+        
+
+  )
     }
 }
 
