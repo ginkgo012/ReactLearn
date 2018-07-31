@@ -4,19 +4,15 @@ class SideBar extends Component{
     constructor(props){
         super(props);
         this.state = {
-            onSidebarOpen: true
+
         };       
     }
 
-    setSideBarStatus(){
-        const currentState = this.state.onSidebarOpen;
-        this.setState({onSidebarOpen: !currentState});
-    }
     
 render(){
     return(
-    <div className="wrapper">
-        <nav id="sidebar" className={this.state.onSidebarOpen ? "" : "active"} >
+    
+        <nav id="sidebar" className={this.props.onSidebarOpen ? "" : "active"} >
             {/* <!-- Sidebar Header --> */}
             <div className="sidebar-header">
                 <h3>Collapsible Sidebar</h3>
@@ -38,15 +34,10 @@ render(){
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div id="content">
-            <button onClick={this.setSideBarStatus.bind(this)} id="sidebarCollapse" className={this.state.onSidebarOpen ? "navbar-btn" : "navbar-btn active"}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            sdfd
-        </div>
-    </div>)
+
+
+        
+    )
     }
 }
 

@@ -8,6 +8,7 @@ import VideoDetail from './components/video_detail';
 import './style.css';
 import NavBar from './components/nav_bar';
 import SideBar from './components/side_bar';
+import ControlSidebar from './components/control_sidebar';
 
 const API_KEY = 'AIzaSyBiJblHvnEP8L2LnRZ_y38fqYRajUkr6kI';
  
@@ -17,15 +18,16 @@ const API_KEY = 'AIzaSyBiJblHvnEP8L2LnRZ_y38fqYRajUkr6kI';
 class App extends Component{
     constructor(props){
         super(props);
-
         this.state={ 
             videos:[],
-            selectedVideo: null
-        
+            selectedVideo: null,
+            onSidebarOpen: true
         };
-
         this.videoSearch('Denmark');
-        
+        this.setSideBarStatus =  ()=>{
+            const currentState = this.state.onSidebarOpen;
+            this.setState({onSidebarOpen: !currentState});
+        }
     }
 
     videoSearch(term){
@@ -40,28 +42,25 @@ class App extends Component{
     }
 
     render(){
-
         //const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 1000 );
-        let childComponent = null;
-        childComponent = <div> JUJU burger </div>;
         return (
-
-            <div>
-                
-                {/* <NavBar /> */}
-                <SideBar onSidebarOpen={this.props.setSideBar} />
-            <div className="col">
+            <div className ="wrapper">           
+                <SideBar onSidebarOpen={this.state.onSidebarOpen}/>
+                <ControlSidebar 
+                setSideBarStatus={this.setSideBarStatus}
+                onSidebarOpen={this.state.onSidebarOpen}
+                />
+                <div id="content">
                 
                 <SearchBar onSearchTermChange={(term) => this.videoSearch(term)} />
-                <div className="row">
-                    <VideoDetail video={this.state.selectedVideo} />
-                    <VideoList 
-                        videos={this.state.videos}
-                        onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-                    />
-                    {childComponent}
+                    <div className="row">
+                        <VideoDetail video={this.state.selectedVideo} />
+                        <VideoList 
+                            videos={this.state.videos}
+                            onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+                        />
+                    </div>
                 </div>
-            </div>
             </div>
             
         
