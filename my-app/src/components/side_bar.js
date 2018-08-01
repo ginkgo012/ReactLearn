@@ -16,7 +16,7 @@ render(){
         <nav id="sidebar" className={this.props.onSidebarOpen ? "" : "active"} >
             {/* <!-- Sidebar Header --> */}
             <div className="sidebar-header">
-                <h3>   Studio </h3>
+                <h3>React<br/>Studio </h3>
             </div>      
             {/* <!-- Sidebar Links --> */}
             <ul className="list-unstyled components">
