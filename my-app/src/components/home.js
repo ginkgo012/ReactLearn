@@ -16,8 +16,8 @@ class Home extends Component{
                     <img src={VideoImg} className="img-thumbnail rounded float-left" />
                     <div className="card-body">
                         <h5 className="card-title">Video Search App</h5>
-                        <p className="card-text">Created an app in order to search videos by using YouTube Api.</p>
-                        <Link to="/videoapp" className="btn btn-primary">Take me a look</Link>
+                        <p className="card-text">It is a responsive single-page-application created by React and APIs from YouTube. Users can experience searching and playing videos without loading pages.</p>
+                        <Link to="/app/videoapp" className="btn btn-primary">Take me a look</Link>
                     </div>
                 </div>     
                 <div className="card" >

@@ -29,12 +29,12 @@ class SearchBar extends Component{
     render() {
         //return <input onChange={this.onInputChange} />;
         return(
-        <div className="search-bar col-md-8">
+        <div className="search-bar row justify-content-start ml-0">
             <input 
             value={this.state.term}
             onChange={event => this.onInputChange(event.target.value)} 
             onKeyPress={event => this.onInputEnter(event)} />
-            <button onClick={() => this.onSearchClick()}>Search</button>
+            <button className="btn btn-secondary" onClick={() => this.onSearchClick()}>Search</button>
         </div>
         )
     }

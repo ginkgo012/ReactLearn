@@ -7,6 +7,8 @@ import SideBar from './components/side_bar';
 import VideoApp from './components/video_app';
 import Home from './components/home';
 import Another from './components/another';
+import About from './components/about';
+import Contact from './components/contact';
 import {BrowserRouter, Route } from 'react-router-dom';
 
 
@@ -34,8 +36,10 @@ class App extends Component{
                 setSideBarStatus={this.setSideBarStatus}
                 onSidebarOpen={this.state.onSidebarOpen} />             
                 <Route exact path="/" component={Home} />  
-                <Route path="/videoapp" component={VideoApp} />  
-                <Route path="/another" component={Another} />  
+                <Route path="/about" component={About} />  
+                <Route path="/app/videoapp" component={VideoApp} />  
+                <Route path="/app/another" component={Another} />
+                <Route path="/contact" component={Contact} />    
                 </div>
             </div>
             </BrowserRouter>

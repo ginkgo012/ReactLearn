@@ -21,17 +21,16 @@ render(){
             {/* <!-- Sidebar Links --> */}
             <ul className="list-unstyled components">
                 <li ><Link to="/">Home</Link></li>
-                <li><a href="#">About</a></li>
+                <li><Link to="/about">About</Link></li>
                 <li>
                     {/* <!-- Link with dropdown items --> */}
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle collapsed">Portfolio</a>
                     <ul className="collapse list-unstyled" id="homeSubmenu">
-                        <li><Link to="/videoapp">Video Search App</Link></li>
-                        <li><Link to="/another">Another</Link></li>
-                        <li><a href="#">Page</a></li>
+                        <li><Link to="/app/videoapp">Video Search App</Link></li>
+                        <li><Link to="/app/another">Another</Link></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
 
         </nav>

@@ -6,7 +6,7 @@ class Another extends Component{
     render(){
         return(
         <div>
-            I am another.
+            Under construction...
             </div>
         )
     }
