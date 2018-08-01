@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class SideBar extends Component{
     constructor(props){
@@ -11,7 +12,7 @@ class SideBar extends Component{
     
 render(){
     return(
-    
+
         <nav id="sidebar" className={this.props.onSidebarOpen ? "" : "active"} >
             {/* <!-- Sidebar Header --> */}
             <div className="sidebar-header">
@@ -19,24 +20,22 @@ render(){
             </div>      
             {/* <!-- Sidebar Links --> */}
             <ul className="list-unstyled components">
-                <li ><a href="#">Home</a></li>
+                <li ><Link to="/">Home</Link></li>
                 <li><a href="#">About</a></li>
                 <li>
                     {/* <!-- Link with dropdown items --> */}
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle collapsed">Pages</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle collapsed">Portfolio</a>
                     <ul className="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
+                        <li><Link to="/videoapp">Video Search App</Link></li>
+                        <li><Link to="/another">Another</Link></li>
                         <li><a href="#">Page</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+
         </nav>
 
-
-        
     )
     }
 }
