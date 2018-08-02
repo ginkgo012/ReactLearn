@@ -13,6 +13,6 @@ server {
   index /home/mingjia-website/ReactLearn/my-app/public/index.html;
   server_name mingjia.dk;
   location / {
-    try_files $uri $uri/ =404;
+    try_files $uri $uri/ /;
   }
 }
