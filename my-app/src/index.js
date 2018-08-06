@@ -10,6 +10,7 @@ import Another from './components/another';
 import About from './components/about';
 import Contact from './components/contact';
 import {BrowserRouter, Route } from 'react-router-dom';
+import Sunmapper from './components/sunmapper';
 
 
 
@@ -38,6 +39,7 @@ class App extends Component{
                 <Route exact path="/" component={Home} />  
                 <Route path="/about" component={About} />  
                 <Route path="/app/videoapp" component={VideoApp} />  
+                <Route path="/app/sunmapper" component={Sunmapper} />
                 <Route path="/app/another" component={Another} />
                 <Route path="/contact" component={Contact} />    
                 </div>
