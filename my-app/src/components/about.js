@@ -9,7 +9,7 @@ class About extends Component{
                 <p className="lead">
                     The website is a single-page-application, which means that user is able to switch different pages fast and smoothly without loading pages. The aim of building this website is to present various projects. </p>
                     <h4>Frontend :</h4>
-                    <p>User interfaces are built with Javascript library - <mark>React</mark>. <mark>React Router</mark> is used for handling routing. <br/>
+                    <p>User interfaces are built with Javascript library - <mark>React</mark>. <mark>React Router</mark> is used for handling routing. <mark>Redux</mark> is responsible for containing state.<br/>
                     The website is designed with open source toolkit <mark>Bootstrap</mark>, which enables the entire application to be responsive and mobile device friendly.
                     </p>
                     <h4>Backend :</h4>

@@ -27,8 +27,9 @@ render(){
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle collapsed">Portfolio</a>
                     <ul className="collapse list-unstyled" id="homeSubmenu">
                         <li><Link to="/app/videoapp">Video Search App</Link></li>
+                        <li><Link to="/app/weatherapp">Weather Forecast App</Link></li>
                         <li><Link to="/app/sunmapper">Sunmapper App</Link></li>
-                        <li><Link to="/app/another">Another</Link></li>
+                        {/* <li><Link to="/app/another">Another</Link></li> */}
                     </ul>
                 </li>
                 <li><Link to="/contact">Contact</Link></li>
