@@ -16,8 +16,15 @@ import ReduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
+import ReactGA from 'react-ga';
 
-
+ReactGA.initialize('UA-133178162-1');
+ReactGA.pageview('/');
+ReactGA.pageview('/about');
+ReactGA.pageview('/app/videoapp');
+ReactGA.pageview('/app/another');
+ReactGA.pageview('/app/weatherapp');
+ReactGA.pageview('/contact');
 
 //Create a new component
 class App extends Component{
